@@ -1,0 +1,8 @@
+bad 0 肩がすくんでいる、主に腕の力を使って引いている 微妙な違い？ 7rep
+bad 1 肩の上下がない 5rep
+bad 2 肘を引ききれていない 4rep
+bad 3 身体をひねりすぎ 5rep 
+good0 15rep
+good1 10rep
+good2 15rep
+good3 10rep

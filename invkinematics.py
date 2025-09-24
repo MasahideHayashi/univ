@@ -30,7 +30,7 @@ def calc_velocity(J,d0,d1):
     
 def calc_torque(F,J):
     return [J[0][0]*F[0]+J[0][1]*F[1],
-            J[1][0]*F[0]*J[1][1]*F[1]]
+            J[1][0]*F[0]+J[1][1]*F[1]]
 
 if __name__=="__main__":
     l = np.load("good.npy")

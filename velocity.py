@@ -15,23 +15,24 @@ def get_velocitylist(l):
     return rs
         
 
-l = np.load("good.npy")
-rs = get_velocitylist(l)
-r = [math.sqrt(pow(x[0]+x[1],2)) for x in rs]
-l2 = np.load("bad.npy")
-rs2 = get_velocitylist(l2)
-r2 = [math.sqrt(pow(x[0]+x[1],2)) for x in rs2]
+if __name__=="__main__":
+    l = np.load("good.npy")
+    rs = get_velocitylist(l)
+    r = [math.sqrt(x[0]**2 + x[1]**2) for x in rs]
+    l2 = np.load("bad.npy")
+    rs2 = get_velocitylist(l2)
+    r2 = [math.sqrt(x[0]**2 + x[1]**2) for x in rs2]
 
 
-fig = plt.figure()
-fig.suptitle("velocity")
+    fig = plt.figure()
+    fig.suptitle("velocity")
 
-ax1 = fig.add_subplot(1,2,1)
-ax2 = fig.add_subplot(1,2,2)
+    ax1 = fig.add_subplot(1,2,1)
+    ax2 = fig.add_subplot(1,2,2)
 
-ax1.plot(range(len(r)), r)
-ax1.set_ylim(0,20)
-ax2.plot(range(len(r2)), r2)
-ax2.set_ylim(0,20)
+    ax1.plot(range(len(r)), r)
+    ax1.set_ylim(0,20)
+    ax2.plot(range(len(r2)), r2)
+    ax2.set_ylim(0,20)
 
-plt.show()
+    plt.show()
